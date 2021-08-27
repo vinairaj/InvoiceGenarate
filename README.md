@@ -1,9 +1,9 @@
 # InvoiceGenarate
 
-# db connection in config.php
-# database table details in estore.sql
+# 1. db connection in config.php
+# 2. database table details in estore.sql
 
-# git clone in  var/www/html in xammp or wamp
-# run the folder InvoiceGenarate
+# 3. git clone in  var/www/html in xammp or wamp
+# 4. run the folder InvoiceGenarate
 
-#note: Run sql in the mysql and run the application.
+# Note: Run sql in the mysql and run the application.
