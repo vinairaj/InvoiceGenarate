@@ -25,6 +25,7 @@ function generateList(data){
   var i = 1;
   var subTotalExcTax  = subTotalIncTax = 0;
   var taxSum = 0; var discount = 0; var discountType = '';
+  var total = 0;
   $.each(data.result, function(key,element){
     discount = (parseFloat(element['discount']));
     discountType = element['discountType'];
@@ -58,10 +59,11 @@ function generateList(data){
   data +="</tr>";
   $('#tableData').append(data);
   subTotalIncTax =  subTotalExcTax + taxSum;
+  total = subTotalIncTax - discount;
   $('#subTotalExcTax').html('$'+subTotalExcTax.toFixed(2));
   $('#subTotalIncTax').html('$'+subTotalIncTax.toFixed(2));
-  $('#total').html('$'+subTotalIncTax.toFixed(2));
-  $('#invoice_total').html('$'+subTotalIncTax.toFixed(2));
+  $('#total').html('$'+total.toFixed(2));
+  $('#invoice_total').html('$'+total.toFixed(2));
   $('#discount').html('$'+discount.toFixed(2) );
   
 
